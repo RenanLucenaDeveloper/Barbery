@@ -24,7 +24,7 @@ img {
 .titulo {
     font-size: 4rem;
     font-weight: 500;
-    margin: 0 auto 3.75rem auto;
+    margin: 2.8rem auto 3.75rem auto;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -36,9 +36,10 @@ img {
     width: 2.5rem;
     height: 2.5rem;
     background-color: #4C391F;
-    transform: translateX(1.5rem) translateY(1rem);
+    top: 2.1rem;
+    transform: translateX(-1rem);
     border-radius: 5px;
-    position: relative;
+    position: absolute;
     z-index: -1;
 }
 
@@ -80,7 +81,7 @@ img {
     padding: 10px;
     min-width: 50rem;
     max-width: 50rem;
-    margin: 3.75rem 10rem 0 0;
+    margin: 3.75rem 14vw 0 0;
     float: right;
     box-shadow: 50px 50px 100px 50px rgba(1, 1, 1, .35);
 }
@@ -139,6 +140,10 @@ header {
     letter-spacing: .1em;
 }
 
+#menu ul li a:hover {
+    text-decoration: underline;
+}
+
 /* Intro */
 
 #intro {
@@ -189,7 +194,7 @@ header {
     background-size: cover;
     width: 4.62rem;
     height: 1.375rem;
-    margin: 1.2rem auto;
+    margin: 1.2rem auto 0 auto;
 }
 
 /* Sobre */
@@ -307,6 +312,10 @@ header {
     border-radius: 1px;
 }
 
+#contato img {
+    border-radius: 5px;
+}
+
 /* Footer */
 
 footer {
@@ -317,8 +326,262 @@ footer {
 
 footer p {
     font-size: 0.875rem;
+    opacity: 80%;
 }
 
 footer .copy {
     margin-top: 3px;
+}
+
+#modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.5);
+    z-index: 99999;
+    animation: show-right .3s forwards;
+}
+
+#modal-container.ativo {
+    display: flex;
+}
+
+#modal {
+    background-color: #332410;
+    border: 1px solid #fff;
+    padding: 3rem;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #E54;
+    height: 40px;
+    width: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#modal h2.titulo-agendar {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+}
+
+#modal h2.titulo-agendar::after {
+    content: "";
+    display: block;
+    background: url(../img/linhas.svg) no-repeat center;
+    background-size: cover;
+    width: 4.62rem;
+    height: 1.375rem;
+    margin: 1.5rem auto 0 auto;
+}
+
+#agendar-info h2.subtitulo{
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+@keyframes show-right {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 1169px) {
+
+/*Estilos Gerais*/
+
+.linha-left {
+    display: none;
+}
+
+.molde-principal {
+    margin: 3.75rem 10vw 0 0;
+}
+
+}
+
+/* ---------------- */
+
+@media only screen and (max-width: 1001px) {
+
+.molde-principal {
+    margin: 3.75rem 6vw 0 0;
+}
+
+}
+
+/* ---------------- */
+
+@media only screen and (max-width: 900px) {
+
+.molde-principal {
+    margin: 3.75rem 3vw 0 0;
+}
+
+}
+
+/* ---------------- */
+
+@media only screen and (max-width: 769px) {
+
+.linha-right {
+    display: none;
+}
+
+.background-item {
+    display: none;
+}
+
+.molde-principal {
+    background: none;
+    padding: 0;
+    min-width: 0;
+    max-width: 100vw;
+    margin: 0;
+    float: none;
+    box-shadow: none;
+}
+
+.molde {
+    max-width: 280px !important;
+}
+
+body {
+    background-color: #332410;
+    padding: 10px;
+}
+
+.bg {
+    background-color: #332410;
+    border: 1px solid #FAEBD7;
+}
+
+.container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 280px !important;
+}
+
+img {
+    max-width: 260px;
+}
+
+.titulo {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 2.8rem auto 3.75rem auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #4C391F;
+    top: 1.5rem;
+    transform: translateX(-.8rem);
+    border-radius: 5px;
+    position: absolute;
+    z-index: -1;
+}
+
+.subtitulo {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #FFFCF7;
+    margin-bottom: 15px;
+}
+
+
+/* Header */
+
+header {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+}
+
+#logo {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    margin: 0 auto 1rem auto;
+    font-size: 4.5rem;
+    color: #FFFCF7;
+}
+
+#menu {
+    margin: 0;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li + li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: .5rem;
+    border-radius: 1px;
+    background-color: #4D391F;
+}
+
+#menu ul li a {
+    padding: 15px;
+    text-decoration: none;
+    color: #FFFCF7;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+
+
+/* Intro */
+
+#intro {
+    margin: 3.75rem auto 0 auto;
+}
+
+/* Sobre */
+
+#sobre .container {
+    flex-direction: column-reverse;
+}
+
+/* Footer */
+
+footer p {
+    max-width: 80vw;
+    margin: 0 auto
+}
+
+#modal {
+    padding: 2rem;
+}
+
 }

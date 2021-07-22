@@ -29,7 +29,7 @@
                             <a href="#contato">Contato</a>
                         </li>
                         <li>
-                            <a href="">Agendar</a>
+                            <a href="" data-modal="abrir">Agendar</a>
                         </li>
                     </ul>
                 </nav>
@@ -39,7 +39,7 @@
                 <div class="molde">
                     <img src="./img/img-0.jpg" class="image0">
                 </div>
-                <button id="agendar-button">Agendar <img src="./img/seta.svg" alt="seta"></button>
+                <button id="agendar-button" data-modal="abrir">Agendar <img src="./img/seta.svg" alt="seta"></button>
             </section>
 
             <section id="sobre">
@@ -96,7 +96,27 @@
 
         </div>
     </div>
-
+    <section id="modal-container" data-modal="container">
+        <div id="modal" data-modal="modal">
+            <button class="fechar" data-modal="fechar">X</button>
+            <h2 class="titulo-agendar">Agendar</h2>
+            <div id="agendar-info">
+                <div class="email">
+                    <h2 class="subtitulo">Email</h2>
+                    <p>barbery@dominio.com</p>
+                </div>
+                <div class="endereco">
+                    <h2 class="subtitulo">Endereço</h2>
+                    <p class="rua">Rua botafogo / número 307</p>
+                    <p>Rio de Janeiro / Copacabana</p>
+                </div>
+                <div class="telefone">
+                    <h2 class="subtitulo">Telefone</h2>
+                    <p>+55 (21) 4002-2004</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="./javascript/script.js"></script>
 </body>
 </html>
