@@ -3,7 +3,7 @@ const image0 = document.querySelector('.image0');
 const distanciaDoTopo = (image0.offsetTop + image0.height) - 200;
 
 function colocaTop () {
-backgroundItem.style.top = distanciaDoTopo + 'px';
+setTimeout(() => {backgroundItem.style.top = distanciaDoTopo + 'px';}, 0)
 }
 
 colocaTop();
